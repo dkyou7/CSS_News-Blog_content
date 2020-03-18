@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+body{
+    font-family: '맑은 고딕','Apple SD Gothic Neo',sans-serif;
+    margin: 0;
+}
+
+/* 사이트 이름 */
+.site h1 a{
+    text-decoration: none;
+    color: #000000;
+}
+.site h1{
+    margin: 0;
+    font-size: 30px;
+}
+
+/* 네비게이션바 */
+.menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu li a{
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #000000;
+}
+.menu li a:hover{
+    background-color: #eeeeee;
+}
+.menu ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.menu li{
+    float: left;
+    width: auto;
+}
+
+/* 기사 */
+.story h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+.story p{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.story img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* 사이드 매뉴 */
+.sidemenu{
+    margin-bottom: 30px;
+}
+.sidemenu h1{
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: dotted 2px #dddddd;
+    color: #666666;
+    font-size: 18px;
+}
+.sidemenu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.sidemenu li a{
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #000000;
+}
+.sidemenu li a:hover{
+    background-color: #eeeeee;
+}
+
+/* 저작권 */
+.copyright p{
+    margin: 0;
+    color: #666666;
+    font-size: 14px;
+}
+
+/* ####### 768 이상부터 적용됨 ####### */
+@media (min-width:768px){
+    /* box3이랑 box4 가로 정렬하기 */
+    .boxA::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .box3{
+        float: left;
+        width: 70%;
+    }
+    .box4{
+        float: left;
+        width: 30%;
+    }
+}
