@@ -128,3 +128,51 @@ body{
 }
 ```
 
+## 3. 레이아웃 조정
+
+### 1) 요소의 세로 간격 조정
+
+- 깔끔하게 보이기 위한 요소의 세로간격 조정이 필요하다.
+
+- 주로 박스를 건드리고, padding-top, padding-bottom 속성을 건드린다.
+
+```css
+/* 박스의 위 아래 간격 */
+.box1{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.box3{
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.box4{
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.box5{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+```
+
+### 2) 요소의 가로 간격 조정
+
+- 요소의 가로간격 조정도 필요하다.
+- 마찬가지로 박스를 건드리고 padding을 이용한다.
+- 간혹 가로 설정 되어있던 것이 100%를 넘어가서 화면이 깨지는 경우가 발생한다.
+  - 이럴때는 box-sizing : border-box; 를 이용하여 내부로 밀어준다.
+
+```css
+    /* box3이랑 box4 왼쪽 오른쪽 간격 */
+    .box3{
+        padding-right: 50px;
+        /* 100%가 넘으면 밑으로 밀리기 때문에 내부로 밀어주는 작업이 필요하다. 
+        이게 box-sizing: border-box; 설정이다. */
+        box-sizing: border-box;
+        /* 안드로이드, ios 지원용 */
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+```
+
